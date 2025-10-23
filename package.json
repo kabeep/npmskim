@@ -1,0 +1,56 @@
+{
+    "name": "npmskim",
+    "description": "A Node.js tool for getting a quick overview of any dependency and its details",
+    "version": "1.0.0-alpha.1",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js",
+            "require": "./dist/index.cjs"
+        }
+    },
+    "main": "./dist/index.cjs",
+    "types": "./dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "rslib build",
+        "build:watch": "rslib build --watch",
+        "check": "biome check --write",
+        "dev": "cross-env NODE_NO_WARNINGS=1 node --loader ts-node/esm bin/cli.ts",
+        "format": "biome format --write",
+        "test": "rstest",
+        "lint-staged": "lint-staged",
+        "prepare": "husky"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "^2.2.7",
+        "@microsoft/api-extractor": "^7.53.2",
+        "@rslib/core": "^0.16.0",
+        "@rstest/core": "^0.5.4",
+        "@types/node": "^24.9.1",
+        "@types/yargs": "^17.0.33",
+        "@typescript/native-preview": "^7.0.0-dev.20251022.1",
+        "cross-env": "^10.1.0",
+        "husky": "^9.1.7",
+        "lint-staged": "^16.2.5",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.9.3"
+    },
+    "author": "Jason Zhang <zzx2067@outlook.com>",
+    "homepage": "https://github.com/kabeep/npmskim#readme",
+    "repository": "git@github.com:kabeep/npmskim.git",
+    "bugs": "https://github.com/kabeep/npmskim/issue",
+    "keywords": [
+        "deps",
+        "dependency",
+        "dependencies",
+        "man",
+        "readme"
+    ],
+    "engines": {
+        "node": ">=18.20"
+    },
+    "license": "MIT"
+}

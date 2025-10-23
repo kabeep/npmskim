@@ -1,0 +1,6 @@
+"src/**/*.ts":
+  - "biome check src tests --write"
+"test/**/*.spec.ts":
+  - "biome check tests --write"
+"bin/**/*.ts":
+  - "biome check bin --write"

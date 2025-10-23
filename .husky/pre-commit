@@ -1,0 +1,4 @@
+#!/bin/sh
+# .husky/pre-commit
+# TODO: Change to Tester
+npm run lint-staged
